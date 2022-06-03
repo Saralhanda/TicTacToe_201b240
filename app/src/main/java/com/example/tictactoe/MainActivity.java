@@ -21,19 +21,19 @@ public class MainActivity extends AppCompatActivity {
             ic=game[tag];
         if(isW==false&&ic==-1) {
             if (player == 1) {
-                v.setImageResource(R.drawable.cross);
+                v.setImageResource(R.drawable.parrot);
                 game[tag] = player;
-                Toast.makeText(this, tag + "" + "Cross", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this,  "" + "PLAYER 1", Toast.LENGTH_SHORT).show();
                 player = 0;
             } else {
-                v.setImageResource(R.drawable.zero);
+                v.setImageResource(R.drawable.crow);
                 game[tag] = player;
-                Toast.makeText(this, tag + "" + "Zero", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "" + "PLAYER 2", Toast.LENGTH_SHORT).show();
                 player = 1;
             }
             for (int i = 0; i < winners.length; i++) {
                 if (game[winners[i][0]] == game[winners[i][1]] && game[winners[i][1]] == game[winners[i][2]] && game[winners[i][0]] > -1) {
-                    Toast.makeText(this, "Winner is " + (player == 0 ? "Cross" : "Zero"), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, "Winner is " + (player == 0 ? "PLAYER 1" : "PLAYER 2"), Toast.LENGTH_SHORT).show();
                     isW=true;
                 }
             }
